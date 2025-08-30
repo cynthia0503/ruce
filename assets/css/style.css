@@ -189,18 +189,18 @@ position: relative;
 }
 
 .privilege .img1{
-    bottom: 63%;
+    bottom: 62%;
 }
 .privilege .img2{
-    bottom: 42%;
+    bottom: 41%;
 }
 
 .privilege .img3{
-    bottom: 21%;
+    bottom: 20%;
 }
 
 .privilege .img4{
-    bottom: 0%;
+    bottom: -1%;
 }
 
 .privilege .arrow1,
@@ -211,14 +211,14 @@ position: relative;
     left: 45.5%;
 }
 .privilege .arrow1{
-    bottom: 62.5%;
+    bottom: 61.5%;
 }
 .privilege .arrow2{
-    bottom: 41.5%;
+    bottom: 40.5%;
 }
 
 .privilege .arrow3{
-    bottom: 20.5%;
+    bottom: 19.5%;
 }
 
 .privileges_05 .txt{
