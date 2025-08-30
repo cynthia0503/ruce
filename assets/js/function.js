@@ -5,6 +5,12 @@ $(function () {
   }, 100);
 });
 
+$(function () {
+  setTimeout(() => {
+    $('.txt-copy').addClass('animate');
+  }, 100);
+});
+
 // スクロール時のアニメーション
 $(function () {
   $(window).on('scroll', function () {
