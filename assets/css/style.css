@@ -256,17 +256,17 @@ position: relative;
 
 @keyframes flare-scale-btn {
   0% {
-    transform: scale(.9);
+    transform: scale(1);
     /* 通常サイズ */
   }
 
   50% {
-    transform: scale(1);
+    transform: scale(1.1);
     /* 拡大 */
   }
 
   100% {
-    transform: scale(.9);
+    transform: scale(1);
     /* 元に戻る */
   }
 }
