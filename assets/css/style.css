@@ -184,7 +184,7 @@ position: relative;
     position: absolute;
     width: 9%;
     left: 45.5%;
-    bottom: -2%;
+    bottom: -1%;
     z-index: 99; 
 }
 
@@ -192,23 +192,23 @@ position: relative;
 .privilege .img2,
 .privilege .img3,
 .privilege .img4{
-    width: 98%;
-    left: 1%;
+    width: 81%;
+    left: 9.5%;
 }
 
 .privilege .img1{
-    bottom: 62%;
+    bottom: 64%;
 }
 .privilege .img2{
-    bottom: 41%;
+    bottom: 45%;
 }
 
 .privilege .img3{
-    bottom: 20%;
+    bottom: 26%;
 }
 
 .privilege .img4{
-    bottom: -1%;
+    bottom: 7%;
 }
 
 .privilege .arrow1,
