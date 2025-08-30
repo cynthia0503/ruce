@@ -99,15 +99,9 @@ body {
   width: 70%;
   left: 15%;
   bottom: 23.5%;
-  opacity: 0;
-  transform: translateY(15%);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  opacity: 1;
 }
 
-.fv .txt.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 .fv .txt-copy{
@@ -135,9 +129,9 @@ position: relative;
 
 .luce1_01 .mov {
     /* position: absolute; */
-    /* width: 80%;
-    left: 10%;
-    bottom: 2%; */
+    width: 85%;
+    left: 7.5%;
+    bottom: 2%;
 }
 
 .luce1_05 .txt{
@@ -179,6 +173,20 @@ position: relative;
     position: relative;
 }
 
+.privilege .img {
+    position: absolute;
+    width: 100%;
+    left: 0%;
+    bottom: 0%;
+}
+
+.privilege .arrow {
+    position: absolute;
+    width: 9%;
+    left: 45.5%;
+    bottom: -2%;
+    z-index: 99; 
+}
 
 .privilege .img1,
 .privilege .img2,
