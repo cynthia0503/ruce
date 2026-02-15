@@ -1,7 +1,24 @@
 /* ========== Base ========== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* 1rem が 10px として計算できるようになる */
+  font-size: 1.6rem;
+  /* これで16px */
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif !important;
+
+}
+
 body {
   background-color: #f1f1f1;
   margin: 0;
+}
+
+h1 {
+  font-size: 3.6rem;
+  /* これで36px（計算がすごく楽！） */
 }
 
 #wrap {
@@ -19,8 +36,8 @@ body {
   height: auto;
 }
 
-#wrap video{
-    width: 100%;
+#wrap video {
+  width: 100%;
 }
 
 /* ========== Animation ========== */
@@ -39,56 +56,30 @@ body {
     opacity: 0;
     transform: translateY(20%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.fadein-down-active {
-  animation: fadeDownAnime 0.8s forwards;
-}
-
-@keyframes fadeDownAnime {
-  0% {
-    opacity: 0;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(20%);
-  }
-}
-
-.fadein-blur-active {
-  animation: blur 0.8s forwards;
-}
-
-@keyframes blur {
-  from {
-    filter: blur(20px);
-    opacity: 0;
-  }
-  to {
-    filter: blur(0);
-    opacity: 1;
-  }
-}
 
 .mov {
-    position: absolute;
+  position: absolute;
   width: 80%;
-    left: 10%;
-    bottom: 2.5%;
+  left: 10%;
+  bottom: 2.5%;
 }
 
-.txt,.txt2 {
-    position: absolute;
+.txt,
+.txt2 {
+  position: absolute;
 }
 
-.img{
-    position: absolute;
+.img {
+  position: absolute;
 }
+
 /* ========== Sections ========== */
 .fv {
   position: relative;
@@ -96,20 +87,34 @@ body {
 
 .fv .txt {
   position: absolute;
-  width: 70%;
-  left: 15%;
-  bottom: 23.5%;
+  width: 80%;
+  left: 10%;
+  bottom: 25%;
   opacity: 1;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.fv .txt .inbox {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif !important;
+  color: #f1f1f1;
+  font-weight: normal !important;
+  letter-spacing: .7vw;
+  font-size: 4.8vw;
+  width: 100%;
+}
+
+.fv .txt .inbox .txt-l {
+  font-size: 8.5vw;
 }
 
 
-
-.fv .txt-copy{
-    position: absolute;
-    width: 14.7%; 
-    left: 9%;
-    bottom: 52.5%;
-      opacity: 0;
+.fv .txt-copy {
+  position: absolute;
+  width: 14.7%;
+  left: 5%;
+  bottom: 52%;
+  opacity: 0;
   transform: translateY(15%);
   transition: opacity 1.2s ease-out, transform 1.2s ease-out;
 }
@@ -119,134 +124,591 @@ body {
   transform: translateY(0);
 }
 
+.fv .txt-copy .inbox {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif !important;
+  color: #f1f1f1;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  font-weight: normal;
+  letter-spacing: .7vw;
+  font-size: 4.8vw;
+}
+
+.fv .access {
+  position: absolute;
+  bottom: 4.2%;
+  width: 90%;
+  left: 5%;
+  text-align: center;
+}
+
+.fv .access .inbox {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Segoe UI", "Roboto", "Meiryo", sans-serif;
+  color: #f1f1f1;
+  font-weight: 100;
+  font-size: 3.5vw;
+  line-height: 1.6;
+}
+
+.fv .access .inbox .txt-l {
+  font-size: 4vw;
+}
+
+
+.fv .notes {
+  position: absolute;
+  text-align: left;
+  width: 78%;
+  left: 20%;
+  bottom: .5%;
+  color: #5b678b;
+}
+
+.notes .inbox {
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Segoe UI", "Roboto", "Meiryo", sans-serif;
+  font-size: 2.45vw;
+  /* left: 1.3; */
+  line-height: 1;
+
+}
+
+.medal-1 {
+  position: absolute;
+  left: 11%;
+  bottom: 13.5%;
+  text-align: center;
+}
+
+.medal-1 .inbox {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif !important;
+  color: #083ff1;
+  font-size: 3vw;
+  letter-spacing: -.3vw;
+  line-height: 1;
+}
+
+.medal-1 .inbox .font-w {
+  color: #f1f1f1 !important;
+  letter-spacing: .5rem;
+  font-size: 2.5vw;
+  line-height: 1.5;
+}
+
+.medal-1 .inbox .font-l {
+  font-size: 6.5vw;
+  letter-spacing: 0rem;
+  line-height: 1;
+}
+
+.medal-1 .inbox .font-m {
+  font-size: 4vw;
+  letter-spacing: 0rem;
+  line-height: 1;
+}
+
+.medal-2 {
+  position: absolute;
+  left: 42%;
+  bottom: 13%;
+  text-align: center;
+}
+
+.medal-2 .inbox {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif !important;
+  color: #083ff1;
+  font-size: 4.5vw;
+  line-height: 1;
+}
+
+.medal-2 .inbox .font-l {
+  font-size: 14.5vw;
+}
+
+.medal-2 .inbox .font-m {
+  font-size: 6.5vw;
+}
+
+.medal-3 {
+  position: absolute;
+  left: 69%;
+  bottom: 14.7%;
+  text-align: center;
+}
+
+.medal-3 .inbox {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif !important;
+  color: #083ff1;
+  font-size: 2.5vw;
+  line-height: 1.2;
+}
+
+
+.medal-3 .inbox .font-l {
+  font-size: 13vw;
+  line-height: .9;
+}
+
+.medal-3 .inbox .font-m {
+  font-size: 6.5vw;
+}
+
+
+
+@media screen and (min-width: 750px) {
+  .fv .txt-copy .inbox {
+    font-size: 36px !important;
+    letter-spacing: 5.25px;
+  }
+
+  .fv .txt .inbox {
+    font-size: 36px !important;
+    /* 50pxに固定 */
+    letter-spacing: 5.25px;
+  }
+
+  .fv .txt .inbox .txt-l {
+    font-size: 57px;
+  }
+
+  .fv .access .inbox {
+    font-size: 27px;
+  }
+
+  .fv .access .inbox .txt-l {
+    font-size: 28px;
+  }
+
+
+  .notes .inbox {
+    font-size: 18px;
+  }
+
+  /*--------メダル-------*/
+
+  .medal-1 .inbox {
+    font-size: 22px;
+    letter-spacing: -.3rem;
+  }
+
+  .medal-1 .inbox .font-w {
+    letter-spacing: .5rem;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .medal-1 .inbox .font-l {
+    font-size: 50px;
+    letter-spacing: 0rem;
+  }
+
+  .medal-1 .inbox .font-m {
+    font-size: 28px;
+    letter-spacing: 0rem;
+    line-height: 1;
+  }
+
+
+  .medal-2 {
+    left: 42%;
+  }
+
+  .medal-2 .inbox {
+    font-size: 35px;
+    line-height: 1;
+  }
+
+  .medal-2 .inbox .font-l {
+    font-size: 105px;
+  }
+
+  .medal-2 .inbox .font-m {
+    font-size: 45px;
+  }
+
+  .medal-3 .inbox {
+    font-size: 18px;
+  }
+
+
+  .medal-3 .inbox .font-l {
+    font-size: 100px;
+  }
+
+  .medal-3 .inbox .font-m {
+    font-size: 45px;
+  }
+
+}
+
 .luce1_01,
+.luce_02,
 .luce1_03,
 .luce1_05,
 .luce1_08,
-.luce1_12{
-position: relative;
+.luce1_12 {
+  position: relative;
 }
 
 .luce1_01 .mov {
-    /* position: absolute; */
-    width: 84%;
-    left: 8.8%;
-    bottom: 3.2%;
+  /* position: absolute; */
+  width: 84%;
+  left: 8.8%;
+  bottom: 13%;
+  border-radius: 1.5rem;
+  overflow: hidden;
 }
 
-.luce1_05 .txt{
-   width: 50%;
-   left: 25%; 
-   bottom:70%;
+.luce1_01 .title {
+  color: #2b4ba6;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  left: 10%;
+  bottom: 56%;
+  font-size: 6.3vw;
+  line-height: 1.4;
 }
 
-.luce1_05 .mov{
-    position: absolute;
-     width: 80%;
-    left: 10%;
-    bottom: 2%;
-    z-index: 99;
+.luce1_01 .title .font-m {
+  color: #375585;
+  font-size: 5.4vw;
 }
 
-.luce1_08 .txt{
-   width: 80%;
-   left: 10%; 
-   bottom:75%;
+.luce1_01 .notes {
+  position: absolute;
+  width: 88%;
+  left: 6%;
+  color: #337ab3;
+  bottom: 0%;
 }
 
-.luce1_08 .txt2{
-   width: 62.5%;
-   left: 18.7%; 
-   bottom:6.5%;
+.luce_02 .inbox {
+  position: absolute;
+  bottom: 35%;
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+  font-family: 'Noto Serif JP', serif !important;
+  font-weight: 800 !important;
 }
 
-.luce1_12 .txt{
-   width:80%;
-   left: 10%; 
-   bottom:82%;
+.luce_02 .inbox p {
+  margin-top: -3%;
+}
+
+.luce_02 .inbox .font-r {
+  color: #ca082f;
+  font-size: 5vw;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.luce_02 .inbox .font-l {
+  color: #ca082f;
+  font-size: 20vw;
+  font-style: italic;
+}
+
+.luce_02 .inbox .font-m {
+  color: #ca082f;
+  font-size: 16vw;
+  font-style: italic;
+  line-height: 1;
+}
+
+.luce_02 .inbox .font-s {
+  color: #e00b35;
+  font-size: 12vw;
+}
+
+
+.campaign {
+  position: relative;
+}
+
+.campaign .inbox {
+  width: 100%;
+  position: absolute;
+  color: #f1f1f1;
+  text-align: center;
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Segoe UI", "Roboto", "Meiryo", sans-serif;
+  text-align: center;
+  bottom: 39.5%;
+  font-size: 5.4vw;
+  line-height: 1.4;
+}
+
+.campaign .notes {
+  width: 85%;
+  left: 8%;
+  position: absolute;
+  bottom: 3.8%;
+}
+
+
+.campaign .notes p {
+  font-size: 2.2vw;
+  text-align: left !important;
+  line-height: 1.2;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 750px) {
+  .luce1_01 .title {
+    font-size: 47px;
+  }
+
+  .luce1_01 .title .font-m {
+    font-size: 40px;
+  }
+
+  .luce_02 .inbox .font-r {
+    font-size: 38px;
+  }
+
+  .luce_02 .inbox .font-l {
+    font-size: 150px;
+  }
+
+  .luce_02 .inbox .font-m {
+    font-size: 120px;
+  }
+
+  .luce_02 .inbox .font-s {
+    font-size: 90px;
+  }
+
+  .campaign .inbox {
+    font-size: 40px;
+  }
+
+  .campaign .notes p {
+    font-size: 16px;
+  }
+}
+
+.campaign-offer {
+  position: absolute;
+  color: #7f021b;
+  text-align: center;
+  width: 100%;
+  bottom: 33%;
+}
+
+.campaign-offer p{
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.campaign-offer .title{
+  font-size: 6.95vw;
+}
+
+.campaign-offer .access{
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Segoe UI", "Roboto", "Meiryo", sans-serif;
+font-size: 3.35vw;
+margin-top: -1%;
+}
+
+.campaign-offer .copy{
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Segoe UI", "Roboto", "Meiryo", sans-serif;
+  font-size: 5.35vw;
+  color: #f1f1f1;
+  margin-top: 1.5%;
+}
+
+
+.campaign-offer .price{
+color: #a80122;
+font-size: 24.8vw;
+font-weight: 800;
+margin-top: -6%;
+letter-spacing: -0.07em;
+margin-left: 1%;
+}
+
+.campaign-offer .font-m{
+  font-size: 12.7vw;
+}
+
+
+.campaign-offer .price2{
+  width: 80%;
+  margin-left: 26%;
+  display: flex;
+font-size: 3.3vw;
+font-weight: 100;
+margin-top: -6%;
+letter-spacing: 0em;
+}
+
+.campaign-offer .price2 .txt{
+  margin-left: 25%;
+}
+
+.campaign-offer .notes {
+bottom: -5%;
+margin-left: 40%;
+}
+
+.campaign-offer .notes .inbox{
+    color: #7f021b;
+    font-size: 2.3vw;
+}
+
+
+@media screen and (min-width: 750px) {
+.campaign-offer .title{
+  font-size: 52px;
+}
+
+.campaign-offer .access{
+font-size: 25px;
+}
+
+.campaign-offer .copy{
+  font-size: 40px;
+}
+
+.campaign-offer .price{
+font-size: 185px;
+letter-spacing: -0.07em;
+
+}
+
+.campaign-offer .font-m{
+  font-size: 95px;
+}
+
+
+.campaign-offer .price2{
+font-size: 25px;
+letter-spacing: 0em;
+}
+
+
+.campaign-offer .notes .inbox{
+    font-size: 17px;
+}
+
+}
+
+.luce1_05 .txt {
+  width: 50%;
+  left: 25%;
+  bottom: 70%;
+}
+
+.luce1_05 .mov {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 2%;
+  z-index: 99;
+}
+
+.luce1_08 .txt {
+  width: 80%;
+  left: 10%;
+  bottom: 75%;
+}
+
+.luce1_08 .txt2 {
+  width: 62.5%;
+  left: 18.7%;
+  bottom: 6.5%;
+}
+
+.luce1_12 .txt {
+  width: 65%;
+  left: 17%;
+  bottom: 81%;
 }
 
 
 .privilege,
 .privileges_05,
-.privileges_06{
-    position: relative;
+.privileges_06 {
+  position: relative;
 }
 
 .privilege .img {
-    position: absolute;
+  position: absolute;
 }
 
 .privilege .arrow {
-    position: absolute;
-    width: 9%;
-    left: 45.5%;
-    bottom: -1%;
-    z-index: 99; 
+  position: absolute;
+  width: 9%;
+  left: 45.5%;
+  bottom: -1%;
+  z-index: 99;
 }
 
 .privilege .img1,
 .privilege .img2,
 .privilege .img3,
-.privilege .img4{
-    width: 81%;
-    left: 9.5%;
+.privilege .img4 {
+  width: 81%;
+  left: 9.5%;
 }
 
-.privilege .img1{
-    bottom: 64%;
-}
-.privilege .img2{
-    bottom: 45%;
+.privilege .img1 {
+  bottom: 64%;
 }
 
-.privilege .img3{
-    bottom: 26%;
+.privilege .img2 {
+  bottom: 45%;
 }
 
-.privilege .img4{
-    bottom: 7%;
+.privilege .img3 {
+  bottom: 26%;
+}
+
+.privilege .img4 {
+  bottom: 7%;
 }
 
 .privilege .arrow1,
 .privilege .arrow2,
-.privilege .arrow3{
-    position: absolute;
-    width: 9%;
-    left: 45.5%;
-}
-.privilege .arrow1{
-    bottom: 61.5%;
-}
-.privilege .arrow2{
-    bottom: 40.5%;
+.privilege .arrow3 {
+  position: absolute;
+  width: 9%;
+  left: 45.5%;
 }
 
-.privilege .arrow3{
-    bottom: 19.5%;
+.privilege .arrow1 {
+  bottom: 61.5%;
 }
 
-.privileges_05 .txt{
-    width: 70%;
-    left: 15%;
-    bottom: 8%;
+.privilege .arrow2 {
+  bottom: 40.5%;
 }
 
-.privileges_06 .img{
-    left: 0;
-    bottom: 4%;
+.privilege .arrow3 {
+  bottom: 19.5%;
+}
+
+.privileges_05 .txt {
+  width: 70%;
+  left: 15%;
+  bottom: 5%;
+}
+
+.privileges_06 .img {
+  left: 0;
+  bottom: 4%;
 
 }
 
-.btn-wrap{
-position: relative;
+.btn-wrap {
+  position: relative;
 }
 
-.btn-wrap .btn{
-    position: absolute;
-    width: 95%;
-    left: 2.5%;
-    bottom: 4%;
+.btn-wrap .btn {
+  position: absolute;
+  width: 95%;
+  left: 2.5%;
+  bottom: 2%;
 }
 
 
@@ -277,14 +739,14 @@ position: relative;
 }
 
 
-.luce1_14{
-    position: relative;
+.luce1_14 {
+  position: relative;
 }
 
-.luce1_14 .txt{
-    width: 72%;
-    left: 14.5%;
-    bottom: 9%;
+.luce1_14 .txt {
+  width: 72%;
+  left: 14.5%;
+  bottom: 9%;
 }
 
 
@@ -300,7 +762,7 @@ position: relative;
   position: absolute;
   width: 108%;
   text-align: center;
-  bottom: 1%;
+  bottom: 4%;
   left: -4%;
 }
 
